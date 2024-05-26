@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>SAIT | Samsung Advanced Institute of Technology</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- meta -->
+    <meta name="Keywords" content="SAIT, Samsung Advanced Institute of Technology, 삼성종합기술원, 삼성전자 종합기술원, Samsung research, Samsung R&amp;D, Samsung future technology, R&amp;D, Autonomoucs Driving, Graphene, New materials, QD, Quantum Dot" />
+    <meta name="Description" content="Metaphotonics | Samsung Advanced Institute of Technology" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Metaphotonics | Samsung Advanced Institute of Technology" />
+    <meta property="og:description" content="Metaphotonics | Samsung Advanced Institute of Technology" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="Samsung Advanced Institute of Technology" />
+    <meta name="Author" content="Samsung Advanced Institute of Technology" />
+    <meta name="robots" content="ALL" />
+    <!-- // meta -->
+    <link rel="stylesheet" href="https://www.sait.samsung.co.kr/saithome/mobile/stylesheets/css/common.css" />
+    <link rel="stylesheet" href="../resources/assets/mobile/library/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../resources/assets/mobile/css/common.css" />
+    <link rel="stylesheet" href="../resources/assets/mobile/css/sub.css" />
+    <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/mobile/javascripts/jquery-1.8.2.min.js"></script>
+    <!-- <script src="../resources/assets/mobile/library/jquery/jquery-3.7.1.min.js"></script> -->
+    <script src="../resources/assets/mobile/library/jquery/jquery.easing.min.js"></script>
+    <script src="../resources/assets/mobile/library/swiper/swiper-bundle.min.js"></script>
+    <script src="../resources/assets/mobile/script/common.js"></script>
+    <script src="../resources/assets/mobile/script/main.js"></script>
+</head>
+
+    <body>
+        <div id="wrap" role="main">
+            <header class="header" id="header">
+    <div class="header_wrap">
+        <div class="header__inner">
+            <h1 class="header__logo">
+                <a href="/">
+                    <img src="../resources/assets/images/common/logo.svg" alt="SAIT" />
+                </a>
+            </h1>
+
+            <div class="util">
+                <div class="util__search">
+                    <button type="button" id="searchBtn">검색</button>
+                </div>
+                <div class="all-menu">
+                    <button type="button" id="gnbBtn">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="headerSearch">
+            <fieldset>
+                <legend>headerSearch form</legend>
+                <div id="globalInput">
+                    <label for="globalSearch" class="hidden-txt">search string</label>
+                    <input type="text" id="searchKeyword2" name="searchKeyword" placeholder="Input text" />
+                    <div class="submit_wrap" onclick="AllSearch();">
+                        <a href="javascript:void(0);" type="submit" value="search"></a>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+
+    <script>
+        $('#searchKeyword2').keydown(function (key) {
+            if (key.keyCode == 13) {
+                //키가 13이면 실행 (엔터는 13)
+                AllSearch();
+            }
+        });
+        function AllSearch() {
+            if ($('#searchKeyword2').val() == '') {
+                alert('Please enter your search word');
+                $('#searchKeyword2').focus();
+                return false;
+            }
+            window.location.href = '../etc/search.do?searchKeyword=' + encodeURIComponent($('#searchKeyword2').val());
+            /* window.allSearchFrm.submit(); */
+        }
+    </script>
+
+    <nav id="gnb">
+        <div class="gnb_wrap">
+            <button type="button" id="gnbClose">gnb 닫기</button>
+            <nav>
+                <h2>사이트 전체 메뉴</h2>
+                <ul class="depth1">
+                    <li>
+                        <button type="button" class="active">About SAIT <i></i></button>
+                        <ul class="depth2" style="display: block">
+                            <li><a href="../about/who.do">Who We Are</a></li>
+                            <li><a href="../about/history.do">History of Progress</a></li>
+                            <li><a href="../about/labs.do">Global Labs</a></li>
+                            <li><a href="../about/collabo_overview.do">Global Collaboration</a></li>
+                            <li><a href="../about/social.do">Social Engagement</a></li>
+                            <li><a href="../about/contact.do">Contact us</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button">Research Areas <i></i></button>
+                        <ul class="depth2" style="">
+                            <li><a href="../research/what.do" style="font-weight: 700">What We Do</a></li>
+                            <!--
+	                     	<li><a href="../research/multimedia.do" >Augmented Reality</a></li>
+							<li><a href="../research/deep.do" >Deep Learning</a></li>
+							<li><a href="../research/autonomous.do" >Automotive Electronics</a></li>
+							<li><a href="../research/brain.do" >Brain Inspired Computing & Device</a></li>
+							-->
+                            <!--
+							<li><a href="../research/deep.do" >Artificial Intelligence</a></li>
+							<li><a href="../research/brain.do" >Computing Platform</a></li>
+	                     	<li><a href="../research/multimedia.do" >Augmented Reality</a></li>							
+							<li><a href="../research/autonomous.do" >Automotive Electronics</a></li>														
+							<li><a href="../research/healthcare.do" >Healthcare Platform</a></li>
+							<li><a href="../research/metaphotonics.do" >Metaphotonics</a></li>
+							<li><a href="../research/graphene.do" >Graphene/2D</a></li>
+							<li><a href="../research/organic.do" >Organic Electronic Materials</a></li>
+							<li><a href="../research/polymer.do" >Optical Component Materials</a></li>
+							<li><a href="../research/inorganics.do" >Functional Inorganics</a></li>
+							<li><a href="../research/quantum.do" >Quantum Dot</a></li>
+							<li><a href="../research/battery.do" >Next Generation Battery</a></li>
+							<li><a href="../research/bio.do" >Biomaterials</a></li>
+							<li><a href="../research/computational.do" >Computational Science</a></li>
+							-->
+                            <li>
+                                <a href="../research/researchArea.do?idx=14"> AI Algorithms</a>
+                            </li>
+                            <li>
+                                <a href="../research/researchArea.do?idx=16"> Computing Platform</a>
+                            </li>
+                            <li>
+                                <a href="../research/researchArea.do?idx=1"> Human Augmentation</a>
+                            </li>
+                            <li>
+                                <a href="../research/researchArea.do?idx=2"> Metaphotonics</a>
+                            </li>
+                            <li>
+                                <a href="../research/researchArea.do?idx=3"> Nano Electronics</a>
+                            </li>
+                            <li>
+                                <a href="../research/researchArea.do?idx=18"> Display Materials</a>
+                            </li>
+                            <li>
+                                <a href="../research/researchArea.do?idx=21"> Battery Materials</a>
+                            </li>
+                            <li>
+                                <a href="../research/researchArea.do?idx=23"> Semiconductor Materials</a>
+                            </li>
+                            <li>
+                                <a href="../research/researchArea.do?idx=27"> Environmental Research</a>
+                            </li>
+                            <!-- 						
+							<li><a href="../research/paper_list.do" style="font-weight: 700;" >Research Papers</a></li>
+							 -->
+                            <li><a href="../research/paper_list_srt.do" style="font-weight: 700">Publications</a></li>
+                            <li><a href="../research/paper_list_wtc.do">Best Research Papers</a></li>
+                            <li><a href="../research/infra.do" style="font-weight: 700">Research Infra</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button type="button">News &amp; Events <i></i></button>
+                        <ul class="depth2" style="">
+                            <li><a href="../about/press.do">Press</a></li>
+                            <li><a href="../event/saif2023.do">AI Forum</a></li>
+                            <li><a href="../event/aiResearcher.do">AI Researcher of the Year</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button type="button">Join Us <i></i></button>
+                        <ul class="depth2" style="">
+                            <li><a href="../join/application.do">Application Process</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="gnb_banner"></div>
+        </div>
+    </nav>
+</header>
+
+
+            <!-- container-->
+            <section id="container" class="about">
+                <!-- subVisual-->
+                <div id="subVisual">
+                    <img src="https://www.sait.samsung.co.kr/saithome/mobile/images/about/about_visual.jpg" alt="" />
+                    <div class="tit_wrap">
+                        <h3>
+                            <span> Samsung Advanced <br />Institute of Technology </span>
+                        </h3>
+                    </div>
+                </div>
+                <!-- //subVisual-->
+
+                <!-- subContent-->
+                <section id="content" class="who">
+                    <div id="subTitle" class="js-scr-sec">
+                        <h4 class="js-scr-box">Who We Are</h4>
+                    </div>
+                    <div class="who_wrap">
+                        <div class="vice_box js-scr-sec">
+                            <img src="https://www.sait.samsung.co.kr/saithome/mobile/images/about/who_img.jpg" class="js-scr-box" alt="Vice President,  S.W. Hwang image" />
+                            <div class="greetings js-scr-box">
+                                <strong>SAIT,</strong> The Samsung Advanced Institute of Technology is Samsung Group's R&amp;D hub, established as the incubator for cutting-edge technologies under the founding philosophy of <em>Boundless search for breakthroughs.</em> <br />
+                                And guided by the vision of <em>Changing the World through Creative Research.</em>
+                            </div>
+                        </div>
+                        <section class="embraces_box js-scr-sec">
+                            <h5 class="js-scr-box">
+                                SAIT embraces <br />
+                                the following missions
+                            </h5>
+                            <div class="bg_wrap js-scr-box"></div>
+                            <div class="embraces_step js-scr-box">
+                                <p class="step01">
+                                    <strong>First,</strong> we develop the world's best or world's first technologies for new markets.<br />
+                                    <strong>Second,</strong> we create new convergence technologies.<br />
+                                    <strong>Third,</strong> we advance science-based nanotechnology research.<br />
+                                    <strong>Fourth,</strong> we develop disruptive technologies going beyond current paradigms.
+                                </p>
+                                <p class="step02">SAIT also functions as the Chief Technology Office (CTO) for the Samsung group including Samsung Electronics, establishing the group's overall R&amp;D outlook and strategy.</p>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+                <!-- //subContent-->
+
+                <!-- subAside-->
+                <aside id="relatedContents" class="js-scr-sec">
+                    <h1 class="js-scr-box">Related Contents</h1>
+                    <div class="related_wrap">
+                        <article class="js-scr-box">
+                            <a href="../about/history.do">
+                                <figure><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/layout/related_history.jpg" alt="History" /></figure>
+                                <h1>History Of Progress <i></i></h1>
+                            </a>
+                        </article>
+                        <article class="js-scr-box">
+                            <a href="../research/what.do">
+                                <figure><img src="https://www.sait.samsung.co.kr/saithome/mobile/images/layout/related_what.jpg" alt="Global" /></figure>
+                                <h1>What We Do <i></i></h1>
+                            </a>
+                        </article>
+                    </div>
+                </aside>
+                <!-- //subAside-->
+            </section>
+            <!-- //container-->
+
+            <!-- footer -->
+
+            <footer class="footer" id="footer">
+    <div class="footer__inner">
+        <div class="footer__banner">
+            <img src="../resources/assets/mobile/images/main/section05_bg.jpg" alt="" />
+            <div class="footer__wrap">
+                <h2>2024 FORUM</h2>
+                <h3>September. 12~13</h3>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__wrap">
+                <div class="footer__etc">
+                    <ul>
+                        <li><a href="javascript:;">Privacy Statement</a></li>
+                        <li>
+                            <a href="javascript:;"><b>Privacy Policy</b></a>
+                        </li>
+                    </ul>
+                    <h2 class="footer__logo">
+                        <img src="../resources/assets/mobile/images/common/footer_logo.svg" alt="" />
+                    </h2>
+                </div>
+                <div class="footer__address">
+                    <div class="footer__row">
+                        <span>130, Samsung-ro, Yeongtong-gu, Suwon-si, Gyeonggi-do, 16678, Korea.</span>
+                        <span>Tel. +82-31-8061-1114</span>
+                    </div>
+                    <div class="footer__row">
+                        <span>Copyright© 2005-2018 SAMSUNG All Rights Reserved.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-123575008-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+
+                gtag('config', 'UA-167217135-1');
+            </script>
+
+            <!-- //footer -->
+            <div id="gnbDimmed" class="dimmed"></div>
+        </div>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/mobile/javascripts/lib/TweenMax/TweenMax.min.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/mobile/javascripts/lib/TweenMax/easing/EasePack.min.js"></script>
+        <script type="text/javascript" src="https://www.sait.samsung.co.kr/saithome/mobile/javascripts/design_common.js"></script>
+    </body>
+</html>

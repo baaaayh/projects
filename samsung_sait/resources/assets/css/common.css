@@ -1,0 +1,259 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "SamsungOneKR";
+  src: local(※), url(../fonts/SamsungOneKorean-200.woff) format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SamsungOneKR";
+  src: local(※), url(../fonts/SamsungOneKorean-300.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SamsungOneKR";
+  src: local(※), url(../fonts/SamsungOneKorean-400.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SamsungOneKR";
+  src: local(※), url(../fonts/SamsungOneKorean-500.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SamsungOneKR";
+  src: local(※), url(../fonts/SamsungOneKorean-600.woff) format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SamsungOneKR";
+  src: local(※), url(../fonts/SamsungOneKorean-700.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SamsungSharpSans";
+  src: local(※), url(../fonts/samsungsharpsans.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SamsungSharpSans";
+  src: local(※), url(../fonts/samsungsharpsans-medium.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SamsungSharpSans";
+  src: local(※), url(../fonts/samsungsharpsans-bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SamsungOneLatin";
+  src: local(※), url(../fonts/SamsungOneLatin-400.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SamsungOneLatin";
+  src: local(※), url(../fonts/SamsungOneLatin-700.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+.hidden {
+  visibility: 0;
+  display: none;
+}
+
+a {
+  color: inherit;
+}
+
+.scroll-lock {
+  overflow-y: hidden;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 1510px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 2;
+  font-family: "SamsungOneKR", "맑은 고딕", "Malgun Gothic", sans-serif;
+  font-weight: 400;
+  line-height: 1.36;
+  color: #fff;
+  transition: 0.23s ease;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 100px;
+  box-sizing: border-box;
+}
+.header__logo {
+  display: inline-block;
+  flex-shrink: 0;
+}
+.header__logo a {
+  display: block;
+}
+.header.white {
+  background-color: #fff;
+  color: #000;
+}
+.header.white .util__search button#searchBtn {
+  background: url(../images/icons/icon_search_black.svg) center/auto no-repeat;
+}
+.header.white .util__search button#searchBtn.active {
+  background: none;
+}
+.header.white .util__search button#searchBtn.active::before, .header.white .util__search button#searchBtn.active::after {
+  background-color: #000;
+}
+
+#gnb {
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+#gnb > ul {
+  display: flex;
+  align-items: center;
+}
+#gnb > ul > li > a {
+  display: block;
+  padding: 0 40px;
+  font-family: "SamsungSharpSans";
+  font-weight: 500;
+  line-height: 80px;
+  box-sizing: border-box;
+}
+
+.util__search button#searchBtn {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  background: url("../images/icons/icon_search.svg") center/auto no-repeat;
+  font-size: 0;
+  border: none;
+  transition: none;
+}
+.util__search button#searchBtn.active {
+  background: none;
+}
+.util__search button#searchBtn.active::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background-color: #fff;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.util__search button#searchBtn.active::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background-color: #fff;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+#headerSearch {
+  top: 81px;
+}
+
+.footer#footer {
+  padding: 0;
+  background-color: #000;
+  font-family: "SamsungOneKR", "맑은 고딕", "Malgun Gothic", sans-serif;
+  font-weight: 400;
+  line-height: 1.36;
+  color: #fff;
+}
+.footer__banner {
+  position: relative;
+  padding: 0 180px;
+  box-sizing: border-box;
+}
+.footer__banner > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.footer__banner .footer__wrap {
+  position: relative;
+  padding: 130px 210px 145px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.footer__banner .footer__wrap h2 {
+  font-family: "SamsungSharpSans";
+  font-size: 60px;
+  font-weight: 700;
+}
+.footer__banner .footer__wrap h3 {
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: 400;
+}
+.footer__bottom {
+  background-color: #010914;
+}
+.footer__bottom .footer__wrap {
+  padding: 49px 180px;
+}
+.footer__etc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__etc ul {
+  display: flex;
+  gap: 30px;
+}
+.footer__etc ul li a {
+  font-size: 14px;
+}
+.footer__etc ul li a b {
+  font-weight: 700;
+}
+.footer__address {
+  margin-top: 40px;
+}
+.footer__row {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+}
+.footer__row:first-child {
+  margin-top: 0;
+}
+.footer__row span {
+  font-size: 14px;
+  line-height: 1;
+  color: #7D8794;
+}

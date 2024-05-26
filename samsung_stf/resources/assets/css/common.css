@@ -1,0 +1,774 @@
+@charset "UTF-8";
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+p,
+span,
+input,
+textarea,
+select,
+button,
+th,
+td,
+blockquote,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  vertical-align: top;
+  text-decoration: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  outline: none;
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  border: none;
+  font: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  src: local(※), url(../fonts/Pretendard-Thin.woff2) format("woff2"), url(../fonts/Pretendard-Thin.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  src: local(※), url(../fonts/Pretendard-ExtraLight.woff2) format("woff2"), url(../fonts/Pretendard-ExtraLight.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  src: local(※), url(../fonts/Pretendard-Light.woff2) format("woff2"), url(../fonts/Pretendard-Light.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  src: local(※), url(../fonts/Pretendard-Regular.woff2) format("woff2"), url(../fonts/Pretendard-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  src: local(※), url(../fonts/Pretendard-Medium.woff2) format("woff2"), url(../fonts/Pretendard-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  src: local(※), url(../fonts/Pretendard-SemiBold.woff2) format("woff2"), url(../fonts/Pretendard-SemiBold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  src: local(※), url(../fonts/Pretendard-Bold.woff2) format("woff2"), url(../fonts/Pretendard-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  src: local(※), url(../fonts/Pretendard-ExtraBold.woff2) format("woff2"), url(../fonts/Pretendard-ExtraBold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  src: local(※), url(../fonts/Pretendard-Black.woff2) format("woff2"), url(../fonts/Pretendard-Black.woff) format("woff");
+}
+@font-face {
+  font-family: "SamsungOneKR";
+  src: local(※), url(../fonts/SamsungOneKorean-200.woff) format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SamsungOneKR";
+  src: local(※), url(../fonts/SamsungOneKorean-300.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SamsungOneKR";
+  src: local(※), url(../fonts/SamsungOneKorean-400.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SamsungOneKR";
+  src: local(※), url(../fonts/SamsungOneKorean-500.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SamsungOneKR";
+  src: local(※), url(../fonts/SamsungOneKorean-600.woff) format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SamsungOneKR";
+  src: local(※), url(../fonts/SamsungOneKorean-700.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SamsungSharpSans";
+  src: local(※), url(../fonts/SamsungSharpSans-Bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik";
+  font-weight: 300;
+  src: local(※), url(../fonts/Rubik-Light.woff2) format("woff2"), url(../fonts/Rubik-Light.woff) format("woff");
+}
+@font-face {
+  font-family: "Rubik";
+  font-weight: 400;
+  src: local(※), url(../fonts/Rubik-Regular.woff2) format("woff2"), url(../fonts/Rubik-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "Rubik";
+  font-weight: 500;
+  src: local(※), url(../fonts/Rubik-Medium.woff2) format("woff2"), url(../fonts/Rubik-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: "Rubik";
+  font-weight: 600;
+  src: local(※), url(../fonts/Rubik-Semibold.woff2) format("woff2"), url(../fonts/Rubik-Semibold.woff) format("woff");
+}
+@font-face {
+  font-family: "Rubik";
+  font-weight: 700;
+  src: local(※), url(../fonts/Rubik-Bold.woff2) format("woff2"), url(../fonts/Rubik-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: "Rubik";
+  font-weight: 800;
+  src: local(※), url(../fonts/Rubik-ExtraBold.woff2) format("woff2"), url(../fonts/Rubik-ExtraBold.woff) format("woff");
+}
+@font-face {
+  font-family: "Rubik";
+  font-weight: 900;
+  src: local(※), url(../fonts/Rubik-Black.woff2) format("woff2"), url(../fonts/Rubik-Black.woff) format("woff");
+}
+.btn {
+  display: inline-block;
+}
+
+.btn-default {
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 27px;
+  padding: 0 46px;
+  transition: 0.14s ease;
+}
+.btn-default__text {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 52px;
+  color: #fff;
+  transition: 0.14s ease;
+}
+.btn-default:hover {
+  background-color: #fff;
+}
+.btn-default:hover .btn-default__text {
+  color: #000;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  font-family: "Pretendard", "맑은 고딕", "Malgun Gothic", sans-serif;
+  z-index: 41;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1760px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background-color: #eee;
+  z-index: 1;
+}
+
+.dim {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 11;
+  transition: 0.24s ease;
+}
+.dim.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.logo {
+  display: inline-block;
+  height: 100px;
+}
+.logo a {
+  display: inline-flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.logo a img {
+  width: 178px;
+}
+
+.gnb__list {
+  display: flex;
+}
+.gnb__list > li > a {
+  position: relative;
+  display: block;
+  padding: 0 51px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 100px;
+  text-align: center;
+  letter-spacing: -0.36px;
+  box-sizing: border-box;
+}
+.gnb__list > li > a::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  transform: translateX(-50%);
+  background-color: #00117A;
+  transition: 0.24s ease;
+}
+.gnb__list > li.active > a {
+  color: #1428A0;
+}
+.gnb__list > li.active > a::before {
+  width: 100%;
+}
+.gnb .depth2 {
+  display: none;
+  flex: 1;
+  box-sizing: border-box;
+}
+.gnb .depth2 ul {
+  padding-top: 12px;
+  padding-bottom: 48px;
+}
+.gnb .depth2 ul li a {
+  display: block;
+  padding: 8px 0;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.32px;
+}
+.gnb .depth2 ul li a:hover {
+  font-weight: 500;
+  color: #1428A0;
+}
+
+.right-box {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  height: 100px;
+}
+
+.user {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.user a {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.util {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.btn {
+  display: inline-block;
+}
+
+.btn-search {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../images/icons/icon_search.svg") center/auto no-repeat;
+  font-size: 0;
+}
+
+.btn-allmenu {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../images/icons/icon_allmenu.svg") center/auto no-repeat;
+  font-size: 0;
+}
+
+.footer {
+  height: auto;
+  background-color: #fafafa;
+}
+.footer.sub {
+  background-color: #fafafa;
+}
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1760px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.footer__nav {
+  display: flex;
+  gap: 40px;
+}
+.footer__nav li a {
+  display: block;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.32px;
+  color: #111;
+}
+.footer__top {
+  padding: 26px 0;
+  border-bottom: 1px solid #ebebeb;
+  box-sizing: border-box;
+}
+.footer__bottom {
+  padding: 30px 0 37px;
+  box-sizing: border-box;
+}
+.footer__info > ul {
+  display: flex;
+  gap: 100px;
+}
+.footer__tit {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1428A0;
+  line-height: 19px;
+  letter-spacing: -0.32px;
+  white-space: nowrap;
+}
+.footer__item {
+  display: flex;
+  gap: 20px;
+}
+.footer__item ul {
+  display: flex;
+}
+.footer__item ul li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.28px;
+  color: #666;
+  padding: 0 20px;
+}
+.footer__item ul li::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1px;
+  height: 30px;
+  background-color: #ddd;
+  transform: translateY(-50%);
+}
+.footer__item ul li:first-child {
+  padding-left: 0;
+}
+.footer__item ul li:first-child::before {
+  display: none;
+}
+.footer__item ul li:last-child {
+  padding-right: 0;
+}
+.footer__copyright {
+  padding-top: 60px;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.28px;
+  color: #666;
+  box-sizing: border-box;
+}
+.footer__text {
+  margin-top: 5px;
+}
+.footer__text:first-child {
+  margin-top: 0;
+}
+
+.family-site {
+  position: relative;
+}
+.family-site button {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  padding: 0 40px 0 20px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 14px;
+  line-height: 45px;
+  letter-spacing: -0.28px;
+  text-align: left;
+  box-sizing: border-box;
+}
+.family-site button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../images/icons/icon_arrow_blk.svg") center/auto no-repeat;
+  transform: translateY(-50%);
+  transition: 0.14s ease;
+}
+.family-site button.active::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+.family-site ul {
+  display: none;
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ececec;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.family-site ul li {
+  width: 100%;
+  border-bottom: 1px solid #ececec;
+}
+.family-site ul li:last-child {
+  border-bottom: 0;
+}
+.family-site ul li a {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#subLocation .location_box.active {
+  -webkit-box-shadow: 0px 24px 20px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 24px 20px 2px rgba(0, 0, 0, 0.25);
+}
+#subLocation::after {
+  display: none;
+}
+
+/*cm_assign */
+.assign_wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 200;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.assign_wrap .assign_boxc {
+  width: 340px;
+  opacity: 0;
+  background: #fff;
+  max-width: 340px;
+  min-width: 340px;
+  padding: 60px 45px 40px 45px;
+}
+
+.assign_wrap .assign_boxc > .tit {
+  font-size: 35px;
+  color: #222;
+  text-align: center;
+}
+
+.assign_wrap .assign_boxc .assign_list {
+  width: 340px;
+  margin: 38px auto 0 auto;
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a {
+  background: #fff;
+  width: 340px;
+  border: 1px solid #d6d6d6;
+  box-sizing: border-box;
+  line-height: 58px;
+  text-align: center;
+  padding-left: 25px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a:before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #439ec3;
+  transition: all ease 0.4s;
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a:hover:before, .assign_wrap .assign_boxc .assign_list > div > a:focus:before {
+  width: 100%;
+  transition: all ease 0.4s;
+  z-index: -1;
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a:hover:after, .assign_wrap .assign_boxc .assign_list > div > a:focus:after {
+  background: url(https://samsungstf.org/ssrfPr/images/common/assign_arr_on.png);
+  transition: all ease 0.2s;
+  transition-delay: 0.2s;
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a:hover span.ico, .assign_wrap .assign_boxc .assign_list > div > a:focus span.ico {
+  transition: all ease 0.2s;
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a:hover span.ico:after, .assign_wrap .assign_boxc .assign_list > div > a:focus span.ico:after {
+  background: #7cbbd5;
+  transition: all ease 0.2s;
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a:hover span.ico.rico1, .assign_wrap .assign_boxc .assign_list > div > a:focus span.ico.rico1 {
+  background: url(https://samsungstf.org/ssrfPr/images/common/assign_ico_01_on.png);
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a:hover span.ico.rico2, .assign_wrap .assign_boxc .assign_list > div > a:focus span.ico.rico2 {
+  background: url(https://samsungstf.org/ssrfPr/images/common/assign_ico_02_on.png);
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a:hover span.ico.rico3, .assign_wrap .assign_boxc .assign_list > div > a:focus span.ico.rico3 {
+  background: url(https://samsungstf.org/ssrfPr/images/common/assign_ico_03_on.png);
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a:hover span.ico.rico4, .assign_wrap .assign_boxc .assign_list > div > a:focus span.ico.rico4 {
+  background: url(https://samsungstf.org/ssrfPr/images/common/assign_ico_04_on.png);
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a:hover span.ico.rico5, .assign_wrap .assign_boxc .assign_list > div > a:focus span.ico.rico5 {
+  background: url(https://samsungstf.org/ssrfPr/images/common/assign_ico_05_on.png);
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a:hover span.text, .assign_wrap .assign_boxc .assign_list > div > a:focus span.text {
+  color: #fff;
+  transition: all ease 0.2s;
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.assign_wrap .assign_boxc .assign_list > div + div {
+  margin-top: 20px;
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a:after {
+  content: "";
+  position: absolute;
+  background: url(https://samsungstf.org/ssrfPr/images/common/assign_arr.png);
+  width: 6px;
+  height: 10px;
+  top: 50%;
+  margin-top: -5px;
+  right: 20px;
+  transition: all ease 0.2s;
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a span.ico {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  top: 50%;
+  margin-top: -18px;
+  left: 11px;
+  transition: all ease 0.2s;
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a span.ico:after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 40px;
+  right: -12px;
+  background: #d6d6d6;
+  top: -2px;
+  transition: all ease 0.2s;
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a span.ico.rico1 {
+  background: url(https://samsungstf.org/ssrfPr/images/common/assign_ico_01.png);
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a span.ico.rico2 {
+  background: url(https://samsungstf.org/ssrfPr/images/common/assign_ico_02.png);
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a span.ico.rico3 {
+  background: url(https://samsungstf.org/ssrfPr/images/common/assign_ico_03.png);
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a span.ico.rico4 {
+  background: url(https://samsungstf.org/ssrfPr/images/common/assign_ico_04.png);
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a span.ico.rico5 {
+  background: url(https://samsungstf.org/ssrfPr/images/common/assign_ico_05.png);
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a span.text {
+  color: #222;
+  font-size: 20px;
+  transition: all ease 0.2s;
+}
+
+.assign_wrap .assign_boxc .assign_list > div > p {
+  position: relative;
+  margin-top: 10px;
+  padding-left: 10px;
+  font-family: "Pretendard", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444;
+}
+.assign_wrap .assign_boxc .assign_list > div > p::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 0;
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #CDCDCD;
+}
+
+.assign_wrap .assign_boxc .clsbtn_r {
+  width: 25px;
+  height: 26px;
+  position: absolute;
+  top: 0;
+  right: -45px;
+  background: url(https://samsungstf.org/ssrfPr/images/common/clsbtn_r.png);
+  cursor: pointer;
+}
+
+.sitemap_wrap .inner_cr .stmap_list dl + dl {
+  margin-left: 80px;
+}

@@ -1,0 +1,602 @@
+@charset "UTF-8";
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+p,
+span,
+input,
+textarea,
+select,
+button,
+th,
+td,
+blockquote,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  vertical-align: top;
+  text-decoration: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  outline: none;
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  border: none;
+  font: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  src: local(※), url(../../fonts/Pretendard-Thin.woff2) format("woff2"), url(../../fonts/Pretendard-Thin.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  src: local(※), url(../../fonts/Pretendard-ExtraLight.woff2) format("woff2"), url(../../fonts/Pretendard-ExtraLight.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  src: local(※), url(../../fonts/Pretendard-Light.woff2) format("woff2"), url(../../fonts/Pretendard-Light.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  src: local(※), url(../../fonts/Pretendard-Regular.woff2) format("woff2"), url(../../fonts/Pretendard-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  src: local(※), url(../../fonts/Pretendard-Medium.woff2) format("woff2"), url(../../fonts/Pretendard-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  src: local(※), url(../../fonts/Pretendard-SemiBold.woff2) format("woff2"), url(../../fonts/Pretendard-SemiBold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  src: local(※), url(../../fonts/Pretendard-Bold.woff2) format("woff2"), url(../../fonts/Pretendard-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  src: local(※), url(../../fonts/Pretendard-ExtraBold.woff2) format("woff2"), url(../../fonts/Pretendard-ExtraBold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  src: local(※), url(../../fonts/Pretendard-Black.woff2) format("woff2"), url(../../fonts/Pretendard-Black.woff) format("woff");
+}
+@font-face {
+  font-family: "SamsungOneKR";
+  src: local(※), url(../../fonts/SamsungOneKorean-200.woff) format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SamsungOneKR";
+  src: local(※), url(../../fonts/SamsungOneKorean-300.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SamsungOneKR";
+  src: local(※), url(../../fonts/SamsungOneKorean-400.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SamsungOneKR";
+  src: local(※), url(../../fonts/SamsungOneKorean-500.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SamsungOneKR";
+  src: local(※), url(../../fonts/SamsungOneKorean-600.woff) format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SamsungOneKR";
+  src: local(※), url(../../fonts/SamsungOneKorean-700.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik";
+  font-weight: 300;
+  src: local(※), url(../../fonts/Rubik-Light.woff2) format("woff2"), url(../../fonts/Rubik-Light.woff) format("woff");
+}
+@font-face {
+  font-family: "Rubik";
+  font-weight: 400;
+  src: local(※), url(../../fonts/Rubik-Regular.woff2) format("woff2"), url(../../fonts/Rubik-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "Rubik";
+  font-weight: 500;
+  src: local(※), url(../../fonts/Rubik-Medium.woff2) format("woff2"), url(../../fonts/Rubik-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: "Rubik";
+  font-weight: 600;
+  src: local(※), url(../../fonts/Rubik-Semibold.woff2) format("woff2"), url(../../fonts/Rubik-Semibold.woff) format("woff");
+}
+@font-face {
+  font-family: "Rubik";
+  font-weight: 700;
+  src: local(※), url(../../fonts/Rubik-Bold.woff2) format("woff2"), url(../../fonts/Rubik-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: "Rubik";
+  font-weight: 800;
+  src: local(※), url(../../fonts/Rubik-ExtraBold.woff2) format("woff2"), url(../../fonts/Rubik-ExtraBold.woff) format("woff");
+}
+@font-face {
+  font-family: "Rubik";
+  font-weight: 900;
+  src: local(※), url(../../fonts/Rubik-Black.woff2) format("woff2"), url(../../fonts/Rubik-Black.woff) format("woff");
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  z-index: 70;
+}
+.header .header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.header .clear .logo {
+  display: inline-block;
+  height: 50px;
+  margin: 0;
+}
+.header .clear .logo a {
+  display: inline-flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.header .clear .logo a img {
+  width: 143px;
+}
+.header .clear .gnb .cls_gnb {
+  left: auto;
+  right: 25px;
+}
+.header .clear::after {
+  display: none;
+}
+
+.gnb a {
+  line-height: 1;
+}
+
+.btn-default {
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 27px;
+  padding: 0 30px;
+  transition: 0.14s ease;
+}
+.btn-default__text {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 38px;
+  color: #fff;
+  transition: 0.14s ease;
+}
+
+.right-box {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+.util {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.btn {
+  display: inline-block;
+}
+
+.btn-search {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../images/icons/icon_search.svg") center/auto no-repeat;
+  font-size: 0;
+}
+
+.btn-allmenu {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../images/icons/icon_allmenu.svg") center/auto no-repeat;
+  font-size: 0;
+}
+
+.footer {
+  height: auto;
+  padding: 30px 0 0;
+  background-color: #fafafa;
+}
+.footer.sub {
+  background-color: #fafafa;
+}
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.footer__nav {
+  font-size: 0;
+}
+.footer__nav li {
+  display: inline-block;
+  padding: 8px 0;
+  margin-right: 18px;
+}
+.footer__nav li:last-child {
+  margin-right: 0;
+}
+.footer__nav li a {
+  display: block;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: -0.24px;
+  color: #111;
+}
+.footer__top {
+  box-sizing: border-box;
+}
+.footer__bottom {
+  padding: 30px 0 37px;
+  box-sizing: border-box;
+}
+.footer__info > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer__tit {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1428A0;
+  line-height: 1;
+  letter-spacing: -0.28px;
+  white-space: nowrap;
+}
+.footer__item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer__item ul {
+  font-size: 0;
+}
+.footer__item ul li {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.28px;
+  color: #666;
+  margin-top: 10px;
+}
+.footer__item ul li:first-child {
+  margin-top: 0;
+}
+.footer__item ul li.footer__column {
+  display: flex;
+  flex-direction: column;
+}
+.footer__item ul li.footer__column .footer__text {
+  padding-right: 0;
+  margin-right: 0;
+  margin-top: 5px;
+}
+.footer__item ul li.footer__column .footer__text:first-child {
+  margin-top: 0;
+}
+.footer__item ul li.footer__column .footer__text::before {
+  display: none;
+}
+.footer__text {
+  position: relative;
+  display: inline-block;
+  padding-right: 9px;
+  margin-right: 8px;
+  box-sizing: border-box;
+}
+.footer__text::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: 0;
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background-color: #dadada;
+}
+.footer__text:last-child {
+  padding-right: 0;
+  margin-right: 0;
+}
+.footer__text:last-child::before {
+  display: none;
+}
+.footer__copyright {
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.28px;
+  color: #666;
+  box-sizing: border-box;
+}
+
+.family-site {
+  position: relative;
+}
+.family-site button {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 0 40px 0 20px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 14px;
+  line-height: 45px;
+  letter-spacing: -0.28px;
+  text-align: left;
+  box-sizing: border-box;
+}
+.family-site button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../images/icons/icon_arrow_blk.svg") center/auto no-repeat;
+  transform: translateY(-50%);
+  transition: 0.14s ease;
+}
+.family-site button.active::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+.family-site ul {
+  display: none;
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ececec;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.family-site ul li {
+  width: 100%;
+  border-bottom: 1px solid #ececec;
+}
+.family-site ul li:last-child {
+  border-bottom: 0;
+}
+.family-site ul li a {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/*cm_assign */
+.assign_wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: #fff;
+  z-index: 200;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.assign_wrap .assign_boxc {
+  width: calc(100% - 90px);
+  opacity: 0;
+  background: #fff;
+  padding: 90px 45px 0px 45px;
+}
+
+.assign_wrap .assign_boxc > .tit {
+  font-size: 35px;
+  color: #222;
+  text-align: center;
+}
+
+.assign_wrap .assign_boxc .assign_list {
+  width: 100%;
+  margin: 38px auto 0 auto;
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a {
+  background: #fff;
+  width: 100%;
+  border: 1px solid #d6d6d6;
+  box-sizing: border-box;
+  line-height: 58px;
+  text-align: center;
+  padding-left: 25px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.assign_wrap .assign_boxc .assign_list > div + div {
+  margin-top: 20px;
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a span.ico {
+  position: absolute;
+  width: 25px;
+  height: 28px;
+  top: 50%;
+  margin-top: -14px;
+  left: 18px;
+  transition: all ease 0.2s;
+  background-size: 25px 28px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a span.ico.rico1 {
+  background-image: url(https://samsungstf.org/ssrfPr/mobile/images/common/assign_ico_01.png);
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a span.ico.rico2 {
+  background-image: url(https://samsungstf.org/ssrfPr/mobile/images/common/assign_ico_02.png);
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a span.ico.rico3 {
+  background-image: url(https://samsungstf.org/ssrfPr/mobile/images/common/assign_ico_03.png);
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a span.ico.rico4 {
+  background-image: url(https://samsungstf.org/ssrfPr/mobile/images/common/assign_ico_04.png);
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a span.ico.rico5 {
+  background-image: url(https://samsungstf.org/ssrfPr/mobile/images/common/assign_ico_05.png);
+}
+
+.assign_wrap .assign_boxc .assign_list > div > a span.text {
+  color: #222;
+  font-size: 20px;
+  transition: all ease 0.2s;
+}
+
+.assign_wrap .assign_boxc .assign_list > div > p {
+  position: relative;
+  margin-top: 10px;
+  padding-left: 10px;
+  font-family: "Pretendard", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444;
+}
+.assign_wrap .assign_boxc .assign_list > div > p::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 0;
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #CDCDCD;
+}
+
+.assign_wrap .assign_boxc .clsbtn_r {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 17px;
+  left: 25px;
+  background: url(https://samsungstf.org/ssrfPr/mobile/images/icon/gnb_cls.png);
+  background-size: 100%;
+  z-index: 125;
+}
